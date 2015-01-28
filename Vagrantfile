@@ -18,7 +18,8 @@ Vagrant::configure("2") do |config|
 
   config.vm.define "ptero", primary: true do |vm|
     vm.vm.network :forwarded_port, guest: 80, host: 8080
-    vm.vm.provision :shell, :inline => "apt-get -qq -y install git python-pip rabbitmq-server redis-server postgresql-server-dev-9.3"
+    vm.vm.provision :shell, :inline => "apt-get update"
+    vm.vm.provision :shell, :inline => "apt-get -qq -y install git python-dev python-pip rabbitmq-server redis-server postgresql-server-dev-9.3"
     vm.vm.provision :shell, :inline => "pip install tox"
     vm.vm.provision :shell, :privileged => false, :inline => "git clone http://github.com/genome/ptero"
   end
