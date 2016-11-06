@@ -1,7 +1,7 @@
 # PTero Workflow Management System
 
 ## Getting Started
-Follow [this guide](https://github.com/genome/ptero/wiki/Getting-Started) to setup a vm with the ptero services running in it (don't worry it's short).
+Follow [this guide](https://github.com/vectis/ptero/wiki/Getting-Started) to setup a vm with the ptero services running in it (don't worry it's short).
 
 ### Submitting a Workflow
 The PTero services are now ready to accept HTTP requests.  Using an HTTP

@@ -28,7 +28,7 @@ Vagrant::configure("2") do |config|
     config.vm.synced_folder ".", "/home/vagrant/.ptero-synced-folder"
     config.vm.provision 'copy ptero to $HOME', type: "shell", privileged: false, inline: "rsync -aLq ~/.ptero-synced-folder/ ~/ptero --exclude='*.tox*' --exclude='*.vagrant*'"
   else
-    config.vm.provision 'clone ptero', type: "shell", privileged: false, inline: "if [ -d ptero ]; then echo Skipping git clone; else git clone http://github.com/genome/ptero.git; fi"
+    config.vm.provision 'clone ptero', type: "shell", privileged: false, inline: "if [ -d ptero ]; then echo Skipping git clone; else git clone http://github.com/vectis/ptero.git; fi"
     config.vm.provision 'initialize submodules', type: "shell", privileged: false, inline: "cd ~/ptero; git submodule update --init"
   end
 

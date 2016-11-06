@@ -25,7 +25,7 @@ remove_all_remotes() {
 add_pull_remote() {
     local name=$1
 
-    git remote add "$GITHUB_PULL_REMOTE" "https://github.com/genome/${name}.git" >&2
+    git remote add "$GITHUB_PULL_REMOTE" "https://github.com/vectis/${name}.git" >&2
     git fetch "${GITHUB_PULL_REMOTE}" >&2
 
     git checkout -B master >&2
@@ -67,14 +67,14 @@ Usage: $(basename $0) [-u <GITHUB_USERNAME>] [-l <GITHUB_PULL_REMOTE>]
 Description:
   1. Updates all submodules.
   2. Removes all existing remotes from all repos (including the parent repo).
-  3. Sets the pull remote for all repos to point at the 'genome' organization.
+  3. Sets the pull remote for all repos to point at the 'vectis' organization.
   4. If -u <GITHUB_USERNAME> is specified, sets the push remote for all repos
      to point at that user's forks.
   5. Fetches all branches from both push and pull remotes for all repos.
 
 Options:
   -l <GITHUB_PULL_REMOTE>
-    What you want to call the 'genome' remote (default: upstream).
+    What you want to call the 'vectis' remote (default: upstream).
 
   -s <GITHUB_PUSH_REMOTE>
     What you want to call the \$GITHUB_USERNAME remote (default: origin).
