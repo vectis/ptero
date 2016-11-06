@@ -7,9 +7,6 @@
 [submodule "services/petri"]
 	path = services/petri
 	url = http://github.com/vectis/ptero-petri.git
-[submodule "perl-sdk"]
-	path = perl-sdk
-	url = http://github.com/vectis/ptero-perl-sdk.git
 [submodule "common"]
 	path = common
 	url = http://github.com/vectis/ptero-common.git
